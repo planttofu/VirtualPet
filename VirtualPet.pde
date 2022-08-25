@@ -48,10 +48,8 @@ bezier(750, 390, 890, 320, 800, 490, 822, 445);  // 2nd part
 
 bezier(818, 456, 740, 500, 700, 495, 630, 460);  // 3rd part 
 
-
-
 //left ear
-
+stroke(197, 170, 143);
 bezier(385, 390, 330, 320, 250, 480, 170, 380); // 1st part  
 noStroke();
 point(170, 380);
@@ -61,12 +59,12 @@ point(220, 500);
 stroke(197, 170, 143);
 bezier(170, 380, 120, 360, 100, 480, 220, 500); // 2nd part
 noStroke();
-stroke(197, 170, 143);
 point(220, 500);
 point(235, 500);
 point(250, 500);
 point(300, 490);
-bezier(220, 500, 235, 500, 250, 510, 310, 490);
+stroke(197, 170, 143);
+bezier(220, 500, 235, 500, 250, 510, 310, 490); // 3rd part 
 
 
 //face
@@ -94,20 +92,23 @@ beginShape();
 //body
 strokeWeight(7);
 noFill(); 
-point(395, 540);
-point(370, 660);
-point(580, 660);
-point(560, 540);
 bezier(395, 540, 250, 750, 700, 750, 560, 540); 
 
 //legs
-point(350, 680);
+
+  //right leg
 beginShape();
-curveVertex(590, 700);
-curveVertex(560, 500);
-curveVertex(550, 580);
-curveVertex(560, 690);
-
-
+curveVertex(550, 680);
+curveVertex(550, 680);
+curveVertex(565, 700);
+curveVertex(580, 700);
+curveVertex(590, 680);
+curveVertex(575, 655);
+curveVertex(575, 655);
 endShape();
+
+  //left leg
+stroke(207, 229, 244); 
+point(390, 675);
+point(400, 700);
 }
