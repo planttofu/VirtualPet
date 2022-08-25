@@ -12,9 +12,8 @@ void draw()
 
   bezier(320, 500, 397, 560, 552, 560, 630, 500);
   
-
   
-  //cheeks
+//cheeks
 
   
  //left cheek
@@ -49,27 +48,66 @@ bezier(750, 390, 890, 320, 800, 490, 822, 445);  // 2nd part
 
 bezier(818, 456, 740, 500, 700, 495, 630, 460);  // 3rd part 
 
+
+
 //left ear
 
 bezier(385, 390, 330, 320, 250, 480, 170, 380); // 1st part  
+noStroke();
+point(170, 380);
+point(120, 420);
+point(170, 480);
+point(220, 500);
+stroke(197, 170, 143);
+bezier(170, 380, 120, 360, 100, 480, 220, 500); // 2nd part
+noStroke();
+stroke(197, 170, 143);
+point(220, 500);
+point(235, 500);
+point(250, 500);
+point(300, 490);
+bezier(220, 500, 235, 500, 250, 510, 310, 490);
+
 
 //face
 stroke(132, 214, 255); 
 fill(132, 214, 255); 
-ellipse(410, 455, 20, 25); 
-ellipse(530, 455, 20, 27); 
- 
+ellipse(400, 455, 20, 25); 
+ellipse(540, 455, 20, 27); 
+stroke(250, 232, 235);
+fill(250, 232, 235); 
+ellipse(380, 481, 24, 10); 
+ellipse(560, 481, 24, 12); 
  
 //mouth
 stroke(197, 170, 143);
+fill(255, 253, 247); 
+strokeWeight(5);
 beginShape();
- curveVertex(440, 500); 
+ curveVertex(410, 420); 
  curveVertex(455, 510); 
- curveVertex(475, 507); 
+ curveVertex(472, 510); 
  curveVertex(490, 510);
- curveVertex(510, 505);
+ curveVertex(520, 450);
  endShape();
  
- 
-}
+//body
+strokeWeight(7);
+noFill(); 
+point(395, 540);
+point(370, 660);
+point(580, 660);
+point(560, 540);
+bezier(395, 540, 250, 750, 700, 750, 560, 540); 
 
+//legs
+point(350, 680);
+beginShape();
+curveVertex(590, 700);
+curveVertex(560, 500);
+curveVertex(550, 580);
+curveVertex(560, 690);
+
+
+endShape();
+}
